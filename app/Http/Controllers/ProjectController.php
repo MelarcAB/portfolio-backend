@@ -45,6 +45,9 @@ class ProjectController extends Controller
     {
         //valida
         $project->update($request->all());
+        //regenera el slug
+        $project->slug = Helper::createUniqueSlug($request->name);
+        $project->save();
 
         return response()->json($project, 200);
     }
