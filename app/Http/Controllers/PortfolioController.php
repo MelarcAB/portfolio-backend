@@ -2,24 +2,39 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Portfolio\StoreRequest;
+
 use Illuminate\Http\Request;
+use App\Models\Project;
+use App\Helpers\Helper;
+use App\Models\Portfolio;
 
 class PortfolioController extends Controller
 {
     //implementar todas las funciones
     public function index()
     {
-        return response()->json(['message' => 'index']);
+        return Portfolio::all();
     }
 
-    public function show($id)
+    public function show(Portfolio $portfolio)
     {
-        return response()->json(['message' => 'show']);
+        return $portfolio;
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        return response()->json(['message' => 'store']);
+        $portfolio = Portfolio::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'image' => $request->image,
+            'git_url' => $request->git_url,
+            'job_title' => $request->job_title,
+            'current_company' => $request->current_company,
+
+        ]);
+
+        return response()->json($portfolio, 201);
     }
 
     public function update(Request $request, $id)
