@@ -26,6 +26,9 @@ return new class extends Migration
             //fecha proyecto
             $table->date('date')->nullable();
 
+            //soft delete
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }

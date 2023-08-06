@@ -55,6 +55,7 @@ class ProjectController extends Controller
     //creacion del metodo delete para eliminar un proyecto
     public function delete(Project $project)
     {
+
         $project->delete();
 
         return response()->json(null, 204);

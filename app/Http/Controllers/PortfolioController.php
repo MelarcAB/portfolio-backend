@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Portfolio\StoreRequest;
+use App\Http\Requests\Portfolio\UpdateRequest;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
@@ -37,13 +38,21 @@ class PortfolioController extends Controller
         return response()->json($portfolio, 201);
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, Project $project)
     {
-        return response()->json(['message' => 'update']);
+        $project->update($request->all());
+        return response()->json($project, 200);
     }
 
-    public function destroy($id)
+    public function destroy($id = 0)
     {
-        return response()->json(['message' => 'destroy']);
+        //validar si existe
+        if (!Portfolio::find($id)) {
+            return response()->json(['message' => 'No se encontro el portfolio'], 404);
+        }
+        $portfolio = Portfolio::find($id);
+        $portfolio->delete();
+
+        return response()->json(null, 204);
     }
 }

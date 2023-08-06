@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -17,6 +18,7 @@ class AuthController extends Controller
             if (!$token = auth('api')->attempt($credentials)) {
                 return response()->json(['error' => 'Unauthorized'], 401);
             }
+
 
             return $this->respondWithToken($token);
         } catch (\Exception $e) {

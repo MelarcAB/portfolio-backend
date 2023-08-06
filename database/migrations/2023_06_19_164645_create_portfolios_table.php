@@ -17,10 +17,9 @@ return new class extends Migration
             $table->text('description')->nullable()->default(null);
             $table->string('image')->nullable()->default(null);
             $table->string('git_url')->nullable()->default(null);
-            //job_position
             $table->string('job_title')->nullable()->default(null);
             $table->string('current_company')->nullable()->default(null);
-
+            $table->string('current_company_website')->nullable()->default(null);
             $table->timestamps();
         });
     }
