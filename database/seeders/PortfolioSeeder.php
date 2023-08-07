@@ -52,6 +52,42 @@ class PortfolioSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
             ],
+            //poker-planning
+            [
+                'name' => 'Poker Planning',
+                'description' => 'Aplicación de poker planning hecha con React',
+                'image' => 'https://via.placeholder.com/150',
+                'slug' => Helper::createUniqueSlug("poker-planning"),
+                'git_url' => 'https://github.com/MelarcAB/poker-planning',
+                'demo_url' => 'https://poker-planning.devmelarc.com/',
+                'created_at' => Carbon::now(),
+                'date' => Carbon::now(),
+            ],
+            //manganol
+            //app para subir comics y mangas en español y leerlos online
+            [
+                'name' => 'Manganol',
+                'description' => 'Aplicación para subir comics y mangas en español y leerlos online',
+                'image' => 'https://via.placeholder.com/150',
+                'slug' => Helper::createUniqueSlug("manganol"),
+                'git_url' => 'https://github.com/MelarcAB/manga-reader',
+                'demo_url' => 'https://manganol.devmelarc.com/',
+                'created_at' => Carbon::now(),
+                'date' => Carbon::now(),
+            ],
+            //devstagram
+            //curso udemy laravel clon de instagram
+            //https://devstagram.devmelarc.com/
+            [
+                'name' => 'Devstagram',
+                'description' => 'Clon de instagram hecho con Laravel (Curso UDEMY)',
+                'image' => 'https://via.placeholder.com/150',
+                'slug' => Helper::createUniqueSlug("devstagram"),
+                'git_url' => 'https://github.com/MelarcAB/devstagram',
+                'demo_url' => 'https://devstagram.devmelarc.com/',
+                'created_at' => Carbon::now(),
+                'date' => Carbon::now(),
+            ],
         ];
 
         foreach ($projects as $project) {
