@@ -37,6 +37,7 @@ class PublicApiController extends Controller
     public function projects()
     {
         $projects = Project::all();
+
         return response()->json(ProjectsResource::collection($projects), 200);
     }
 }

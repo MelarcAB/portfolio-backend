@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
 
         //portfolio seeder
         $this->call(PortfolioSeeder::class);
+
+        //skills seeder
+        $this->call(SkillsSeeder::class);
     }
 }

@@ -27,3 +27,8 @@ Route::middleware('auth:api')->group(function () {
 //public api controller
 Route::get('/portfolio', [App\Http\Controllers\PublicApiController::class, 'profile']);
 Route::get('/projects', [App\Http\Controllers\PublicApiController::class, 'projects']);
+
+//SkillTypesController Resource
+Route::resource('skilltypes', App\Http\Controllers\SkillTypesController::class);
+//SkillsController Resource
+Route::resource('skills', App\Http\Controllers\SkillsController::class);

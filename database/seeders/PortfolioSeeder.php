@@ -19,10 +19,10 @@ class PortfolioSeeder extends Seeder
     {
         Portfolio::create([
             'name' => 'Marc Ariño Barceló',
-            'description' => 'This is my portfolio. Welcome noseque',
+            'description' => 'Backend Developer.\n Especializado en PHP y Laravel con una sólida formación en DAM y DAW. Experiencia en MySQL, API REST y metodologías ágiles como Sprints. Actualmente ampliando habilidades en React.',
             'image' => 'https://via.placeholder.com/150',
             'git_url' => 'https://github.com/MelarcAB',
-            'job_title' => 'FullStack Web Developer',
+            'job_title' => 'Backend Developer',
             'current_company' => 'Nemon2ib',
             'current_company_website' => 'https://nemon2ib.io/',
 
