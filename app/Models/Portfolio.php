@@ -17,5 +17,9 @@ class Portfolio extends Model
         'git_url',
         'job_title',
         'current_company',
+        'current_company_website',
+        'city',
+        'country',
+        'linkedin_url',
     ];
 }

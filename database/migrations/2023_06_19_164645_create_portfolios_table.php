@@ -13,6 +13,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable()->default(null);
             $table->string('image')->nullable()->default(null);
+            $table->string('city')->nullable()->default(null);
+            $table->string('country')->nullable()->default(null);
             $table->string('git_url')->nullable()->default(null);
             $table->string('job_title')->nullable()->default(null);
             $table->string('current_company')->nullable()->default(null);

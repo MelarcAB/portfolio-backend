@@ -23,6 +23,9 @@ class PortfolioResource extends JsonResource
             'current_company' => $this->current_company ?? '',
             'current_company_website' => $this->current_company_website ?? '',
             'linkedin_url' => $this->linkedin_url ?? '',
+            'city' => $this->city ?? '',
+            'country' => $this->country ?? '',
+
 
         ];
     }
