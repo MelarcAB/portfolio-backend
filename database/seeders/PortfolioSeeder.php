@@ -25,6 +25,7 @@ class PortfolioSeeder extends Seeder
             'job_title' => 'Backend Developer',
             'current_company' => 'Nemon2ib',
             'current_company_website' => 'https://nemon2ib.io/',
+            'linkedin_url' => 'https://www.linkedin.com/in/marc-arino-barcelo/',
 
         ]);
 

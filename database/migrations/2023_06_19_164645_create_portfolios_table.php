@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('job_title')->nullable()->default(null);
             $table->string('current_company')->nullable()->default(null);
             $table->string('current_company_website')->nullable()->default(null);
+            $table->string('linkedin_url')->nullable()->default(null);
             $table->timestamps();
         });
     }
