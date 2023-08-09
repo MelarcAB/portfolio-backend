@@ -57,7 +57,7 @@ class PortfolioSeeder extends Seeder
             [
                 'name' => 'Poker Planning',
                 'description' => 'Aplicación de poker planning hecha con React',
-                'image' => 'https://via.placeholder.com/150',
+                'image' => 'https://portfolio.melarc.dev/img/poker_planning.webp',
                 'slug' => Helper::createUniqueSlug("poker-planning"),
                 'git_url' => 'https://github.com/MelarcAB/poker-planning',
                 'demo_url' => 'https://poker-planning.devmelarc.com/',
@@ -82,7 +82,7 @@ class PortfolioSeeder extends Seeder
             [
                 'name' => 'Devstagram',
                 'description' => 'Clon de instagram hecho con Laravel (Curso UDEMY)',
-                'image' => 'https://via.placeholder.com/150',
+                'image' => 'https://portfolio.melarc.dev/img/devstagram.webp',
                 'slug' => Helper::createUniqueSlug("devstagram"),
                 'git_url' => 'https://github.com/MelarcAB/devstagram',
                 'demo_url' => 'https://devstagram.devmelarc.com/',
