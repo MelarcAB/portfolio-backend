@@ -55,7 +55,7 @@ class SkillsSeeder extends Seeder
             Skills::create([
                 'name' => $skill['name'],
                 'slug' => Helper::createUniqueSlugSkill($skill['name']),
-                'skill_type_id' => $skill_type->id,
+                'skill_types_id' => $skill_type->id,
             ]);
         }
     }

@@ -22,6 +22,6 @@ class SkillTypes extends Model
 
     public function skills()
     {
-        return $this->hasMany(Skills::class);
+        return $this->hasMany(Skills::class, 'skill_types_id', 'id');
     }
 }

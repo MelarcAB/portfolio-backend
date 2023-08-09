@@ -16,11 +16,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
 
-            $table->foreignId('skill_type_id')->constrained('skill_types')->onDelete('cascade');
+            $table->bigInteger('skill_types_id')->unsigned();
 
             $table->integer('percentage')->default(0);
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('skill_types_id')->references('id')->on('skill_types')->onDelete('cascade');
         });
     }
 

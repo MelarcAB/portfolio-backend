@@ -20,7 +20,7 @@ class SkillResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'percentage' => $this->percentage,
-            'skill_types' => new SkillTypesResource($this->skill_types()->first())
+            'skill_types' => new SkillTypesResource($this->skill_types)
         ];
     }
 }
