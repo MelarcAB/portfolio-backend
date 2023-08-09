@@ -25,8 +25,6 @@ class PortfolioResource extends JsonResource
             'linkedin_url' => $this->linkedin_url ?? '',
             'city' => $this->city ?? '',
             'country' => $this->country ?? '',
-
-
         ];
     }
 }
