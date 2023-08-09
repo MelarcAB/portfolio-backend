@@ -34,7 +34,7 @@ class PortfolioSeeder extends Seeder
             [
                 'name' => 'Pokédex',
                 'description' => 'Pokédex hecha con React usando PokeAPI',
-                'image' => 'https://via.placeholder.com/150',
+                'image' => 'https://portfolio.melarc.dev/img/pokedex.webp',
                 'slug' => Helper::createUniqueSlug("pokedex"),
                 'git_url' => 'https://github.com/MelarcAB/pokedex-pokeapi-v2',
                 'demo_url' => 'https://pokedex-melarc-ea378914038c.herokuapp.com/',
@@ -69,7 +69,7 @@ class PortfolioSeeder extends Seeder
             [
                 'name' => 'Manganol',
                 'description' => 'Aplicación para subir comics y mangas en español y leerlos online',
-                'image' => 'https://via.placeholder.com/150',
+                'image' => 'https://portfolio.melarc.dev/img/manganol.webp',
                 'slug' => Helper::createUniqueSlug("manganol"),
                 'git_url' => 'https://github.com/MelarcAB/manga-reader',
                 'demo_url' => 'https://manganol.devmelarc.com/',
