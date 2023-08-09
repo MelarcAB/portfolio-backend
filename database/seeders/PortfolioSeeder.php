@@ -45,7 +45,7 @@ class PortfolioSeeder extends Seeder
             [
                 'name' => 'ExaminAI',
                 'description' => 'Aplicación que genera y corrige exámenes de inglés usando IA',
-                'image' => 'https://via.placeholder.com/150',
+                'image' => 'https://portfolio.melarc.dev/img/examinai.webp',
                 'slug' => Helper::createUniqueSlug("ExaminAI"),
                 'git_url' => 'https://github.com/MelarcAB/ai-english-teacher',
                 'demo_url' => 'https://examinai.devmelarc.com/',
