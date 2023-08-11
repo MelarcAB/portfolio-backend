@@ -44,6 +44,8 @@ class PortfolioSeeder extends Seeder
                 //date now
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
+                'labels' => ['React', 'PokeAPI', 'API REST', 'Vite', 'Heroku'],
+
             ],
             [
                 'name' => 'ExaminAI',
@@ -55,6 +57,7 @@ class PortfolioSeeder extends Seeder
                 //date now
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
+                'labels' => ['Laravel', 'API REST', 'Vite', 'TailwindCSS', 'OpenAI', 'JWT'],
             ],
             //poker-planning
             [
@@ -66,6 +69,7 @@ class PortfolioSeeder extends Seeder
                 'demo_url' => 'https://poker-planning.devmelarc.com/',
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
+                'labels' => ['Laravel', 'Vite', 'Bootstrap', 'Websockets', 'Jquery', 'JWT'],
             ],
             //manganol
             //app para subir comics y mangas en español y leerlos online
@@ -78,6 +82,7 @@ class PortfolioSeeder extends Seeder
                 'demo_url' => 'https://manganol.devmelarc.com/',
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
+                'labels' => ['Laravel', 'Vite', 'Bootstrap', 'JWT'],
             ],
             //devstagram
             //curso udemy laravel clon de instagram
@@ -91,11 +96,20 @@ class PortfolioSeeder extends Seeder
                 'demo_url' => 'https://devstagram.devmelarc.com/',
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
+                'labels' => ['Laravel', 'Bootstrap', 'Jquery'],
             ],
         ];
 
         foreach ($projects as $project) {
-            Project::create($project);
+            $labels = $project['labels'];
+            unset($project['labels']);
+            $project = Project::create($project);
+            foreach ($labels as $label) {
+                $project->labels()->create([
+                    'name' => $label,
+                    'project_id' => $project->id,
+                ]);
+            }
         }
     }
 }

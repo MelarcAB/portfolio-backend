@@ -16,16 +16,20 @@ class ProjectLabel extends Model
 
     protected $fillable = [
         'name',
+    ];
+
+    //ocultar id deleted created y updated
+    protected $hidden = [
+        'id',
+        'deleted_at',
+        'created_at',
+        'updated_at',
         'project_id'
+
     ];
 
     public function project()
     {
-        return $this->belongsTo(Projects::class, 'project_id', 'id');
-    }
-
-    public function project_labels()
-    {
-        return $this->hasMany(Projects::class, 'project_id', 'id');
+        return $this->belongsTo(Project::class, 'project_id', 'id');
     }
 }

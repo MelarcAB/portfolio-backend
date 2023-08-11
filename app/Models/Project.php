@@ -22,4 +22,11 @@ class Project extends Model
         'date',
 
     ];
+
+
+    //labels
+    public function labels()
+    {
+        return $this->hasMany(ProjectLabel::class, 'project_id');
+    }
 }

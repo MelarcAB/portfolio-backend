@@ -22,6 +22,7 @@ class ProjectsResource extends JsonResource
             'git_url' => $this->git_url ?? '',
             'demo_url' => $this->demo_url ?? '',
             'date' => $this->date ?? '',
+            'labels' => $this->labels ?? [],
 
         ];
     }
