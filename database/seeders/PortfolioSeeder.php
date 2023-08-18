@@ -40,7 +40,7 @@ class PortfolioSeeder extends Seeder
                 'image' => 'https://portfolio.melarc.dev/img/pokedex.webp',
                 'slug' => Helper::createUniqueSlug("pokedex"),
                 'git_url' => 'https://github.com/MelarcAB/pokedex-pokeapi-v2',
-                'demo_url' => 'https://pokedex-melarc-ea378914038c.herokuapp.com/',
+                'demo_url' => 'https://pokedex.melarc.dev/',
                 //date now
                 'created_at' => Carbon::now(),
                 'date' => Carbon::now(),
