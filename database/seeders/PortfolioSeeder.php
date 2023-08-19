@@ -43,7 +43,7 @@ class PortfolioSeeder extends Seeder
                 'demo_url' => 'https://pokedex.melarc.dev/',
                 //date now
                 'created_at' => Carbon::now(),
-                'date' => Carbon::now(),
+                'date' => '2023-08-10',
                 'labels' => ['React', 'PokeAPI', 'API REST', 'Vite', 'Heroku'],
 
             ],
@@ -56,7 +56,7 @@ class PortfolioSeeder extends Seeder
                 'demo_url' => 'https://examinai.devmelarc.com/',
                 //date now
                 'created_at' => Carbon::now(),
-                'date' => Carbon::now(),
+                'date' => '2023-05-15',
                 'labels' => ['Laravel', 'API REST', 'Vite', 'TailwindCSS', 'OpenAI', 'JWT'],
             ],
             //poker-planning
@@ -95,8 +95,19 @@ class PortfolioSeeder extends Seeder
                 'git_url' => 'https://github.com/MelarcAB/devstagram',
                 'demo_url' => 'https://devstagram.devmelarc.com/',
                 'created_at' => Carbon::now(),
-                'date' => Carbon::now(),
+                'date' => '2022-10-10',
                 'labels' => ['Laravel', 'Bootstrap', 'Jquery'],
+            ],
+            [
+                'name' => 'Generador de recetas',
+                'description' => 'Generador de recetas hecho con React/Laravel usando la API de OpenAI',
+                'image' => 'https://portfolio.melarc.dev/img/recetas.webp',
+                'slug' => Helper::createUniqueSlug("Generador de recetas"),
+                'git_url' => 'https://github.com/MelarcAB/ai-recipes-front',
+                'demo_url' => 'https://ai-recipes.melarc.dev/',
+                'created_at' => Carbon::now(),
+                'date' => '2023-08-20',
+                'labels' => ['Laravel', 'Tailwindcss', 'React', 'Vite', 'OpenAI', 'SPA', 'JWT'],
             ],
         ];
 
