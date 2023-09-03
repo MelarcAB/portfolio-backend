@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use App\Models\Experience;
 use Illuminate\Support\Str;
 use App\Models\Project;
 use App\Models\SkillTypes;
@@ -52,6 +53,20 @@ class Helper
 
         $counter = 1;
         while (Skills::query()->where('slug', '=', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $counter++;
+        }
+
+        return $slug;
+    }
+
+    //unique slug for experiences
+    public static function createUniqueSlugExperience(string $name): string
+    {
+        $slug = Str::slug($name);
+        $originalSlug = $slug;
+
+        $counter = 1;
+        while (Experience::query()->where('slug', 'like', $slug)->exists()) {
             $slug = $originalSlug . '-' . $counter++;
         }
 

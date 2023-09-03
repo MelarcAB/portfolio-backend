@@ -20,6 +20,8 @@ return new class extends Migration
             //start and end date
             $table->date('start_date');
             $table->date('end_date')->nullable();
+            //slug
+            $table->string('slug')->unique();
 
             $table->timestamps();
         });

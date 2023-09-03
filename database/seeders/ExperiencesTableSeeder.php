@@ -6,6 +6,8 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Experience;
 use App\Enums\ExperienceType;
+//helper
+use App\Helpers\Helper;
 
 class ExperiencesTableSeeder extends Seeder
 {
@@ -21,6 +23,7 @@ class ExperiencesTableSeeder extends Seeder
             'start_date' => '2017-09-01',
             'end_date' => '2018-06-01',
             'experience_type' => ExperienceType::EDUCATION,
+            'slug' => Helper::createUniqueSlugExperience('Desarrollo de Apliaciones Web')
         ]);
 
         Experience::create([
@@ -30,6 +33,7 @@ class ExperiencesTableSeeder extends Seeder
             'start_date' => '2015-09-01',
             'end_date' => '2017-06-01',
             'experience_type' => ExperienceType::EDUCATION,
+            'slug' => Helper::createUniqueSlugExperience('Desarrollo de Aplicaciones Multiplataforma')
         ]);
 
         //work Eldine, 2017-2019/04
@@ -40,6 +44,7 @@ class ExperiencesTableSeeder extends Seeder
             'start_date' => '2017-09-01',
             'end_date' => '2020-04-01',
             'experience_type' => ExperienceType::WORK,
+            'slug' => Helper::createUniqueSlugExperience('Desarrollador Web')
         ]);
 
         //work Nemon2ib 2020/09-2021/03
@@ -49,6 +54,7 @@ class ExperiencesTableSeeder extends Seeder
             'company' => 'Nemon2ib',
             'start_date' => '2020-09-01',
             'experience_type' => ExperienceType::WORK,
+            'slug' => Helper::createUniqueSlugExperience('Desarrollador Web')
         ]);
     }
 }

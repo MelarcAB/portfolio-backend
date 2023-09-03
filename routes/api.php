@@ -33,5 +33,6 @@ Route::resource('skilltypes', App\Http\Controllers\SkillTypesController::class);
 //SkillsController Resource
 Route::resource('skills', App\Http\Controllers\SkillsController::class);
 
+Route::resource('experiences', App\Http\Controllers\ExperiencesController::class);
 
 Route::post('/contact', [App\Http\Controllers\ContactMailController::class, 'send'])->middleware('throttle:3,1');
