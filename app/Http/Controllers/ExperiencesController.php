@@ -44,4 +44,32 @@ class ExperiencesController extends Controller
     {
         //
     }
+
+    //Function filter, recibe un parametro de tipo array con TypeExperience y devuelve un array con las experiencias que coinciden con el parametro
+    public function filter(Request $request)
+    {
+        try {
+            //agrupo las experiencias por tipo en un array
+            $types = [];
+            $types_request = $request->query('type', []);
+            if (!is_array($types_request)) {
+                $types_request = [$types_request];
+            }
+            foreach ($types_request as $type) {
+                array_push($types, $type);
+            }
+            //si no hay ningun tipo seleccionado, devuelvo arr vacio
+            if (count($types) == 0) {
+                return response()->json([]);
+            }
+
+            //order by start_date
+            $experiences = Experience::whereIn('experience_type', $types)->orderBy('start_date', 'desc')->get();
+            return response()->json($experiences);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => 'Experience not found' . $e
+            ], 404);
+        }
+    }
 }
