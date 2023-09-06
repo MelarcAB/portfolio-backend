@@ -21,6 +21,9 @@ class Experience extends Model
         'end_date',
     ];
 
+    //hide id created_at and updated_at
+    protected $hidden = ['id', 'created_at', 'updated_at'];
+
     public function getExperienceTypeAttribute($value)
     {
         if (in_array($value, ExperienceType::all())) {
