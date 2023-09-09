@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('end_date')->nullable();
             //slug
             $table->string('slug')->unique();
+            $table->string('img')->nullable();
 
             $table->timestamps();
         });

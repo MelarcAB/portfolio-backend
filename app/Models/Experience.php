@@ -19,6 +19,7 @@ class Experience extends Model
         'company',
         'start_date',
         'end_date',
+        'img',
     ];
 
     //hide id created_at and updated_at
