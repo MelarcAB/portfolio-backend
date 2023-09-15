@@ -22,12 +22,14 @@ class Experience extends Model
         'img',
     ];
 
+
     //hide id created_at and updated_at
     protected $hidden = ['id', 'created_at', 'updated_at'];
 
     public function getExperienceTypeAttribute($value)
     {
         if (in_array($value, ExperienceType::all())) {
+            
             return $value;
         }
         // You can handle unexpected values here.

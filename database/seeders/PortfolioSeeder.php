@@ -35,6 +35,19 @@ class PortfolioSeeder extends Seeder
         //aprovechamos para añadir proyectos
         $projects = [
             [
+                'name' => 'El tiempo',
+                'description' => 'Consulta el tiempo de tu ciudad de los próximos días. Con React y Express',
+                'image' => 'https://portfolio.melarc.dev/img/eltiempo.webp',
+                'slug' => Helper::createUniqueSlug("el tiempo"),
+                'git_url' => 'https://github.com/MelarcAB/weather-app',
+                'demo_url' => 'https://eltiempo.melarc.dev/',
+                //date now
+                'created_at' => Carbon::now(),
+                'date' => '2023-09-15',
+                'labels' => ['React', 'Tailwindcss', 'WeatherStack API', 'Vite', 'Express'],
+
+            ],
+            [
                 'name' => 'Pokédex',
                 'description' => 'Pokédex hecha con React usando PokeAPI',
                 'image' => 'https://portfolio.melarc.dev/img/pokedex.webp',
@@ -44,7 +57,7 @@ class PortfolioSeeder extends Seeder
                 //date now
                 'created_at' => Carbon::now(),
                 'date' => '2023-08-10',
-                'labels' => ['React', 'PokeAPI', 'API REST', 'Vite', 'Heroku'],
+                'labels' => ['React', 'PokeAPI', 'API REST', 'Vite'],
 
             ],
             [
