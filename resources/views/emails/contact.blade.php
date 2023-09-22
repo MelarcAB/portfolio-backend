@@ -43,8 +43,8 @@
         <h1>Mensaje de {{ $name }}</h1>
         <hr>
         <div class="content">
-            <p><strong>Email:</strong> {{ $email }}</p>
-            <p><strong>Mensaje:</strong> {{ $message }}</p>
+            <p><strong>De:</strong> {{ $email }}</p>
+            {{($txt)}}
         </div>
         <div class="footer">
             <p>Este es un mensaje automático, por favor no responder directamente a este correo.</p>
