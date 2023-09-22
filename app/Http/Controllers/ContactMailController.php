@@ -25,6 +25,8 @@ class ContactMailController extends Controller
     {
         try {
             $details = $request->only(['name', 'email', 'message']);
+            //convertir message a "txt"
+            $details['txt'] = $details['message'];
             $this->contactMailService->sendMail($details);
             Log::info('Email de contacto enviado correctamente. Detalles: ' . json_encode($details));
             return response()->json(['message' => 'Mensaje enviado correctamente']);
